@@ -14,7 +14,6 @@ function App() {
     noti: "",
   });
 
-
   function changeHandler(event) {
     const { name, value, checked, type } = event.target;
     setFormData((prevFormData) => {
@@ -31,8 +30,11 @@ function App() {
   }
 
   return (
-    <div className="h-screen w-full flex flex-col px-4">
-      <form onSubmit={submitHandler}>
+    <div className=" w-full flex flex-col items-center">
+      <form
+        className="w-[65vw] border-2 hover:shadow-2xl ease-linear transition-all duration-300 px-5 my-4"
+        onSubmit={submitHandler}
+      >
         <div className="flex justify-center mt-4">
           <h1 className="text-3xl font-bold">Personal Details</h1>
         </div>
@@ -81,19 +83,17 @@ function App() {
         {/* dropdown */}
 
         <div>
+          <h3 className="text-base font-semibold">Country</h3>
           <select
             defaultValue=""
-            className="text-base font-semibold"
+            className="text-base font-semibold mt-2 w-full border-2 rounded h-[35px] w-full px-2"
             name="country"
             id="country"
             value={formData.country}
             onChange={changeHandler}
           >
-            <option value="" disabled>
-              Country
-            </option>
-            <option value="USA">USA</option>
             <option value="India">India</option>
+            <option value="USA">USA</option>
             <option value="Brazil">Brazil</option>
             <option value="Germany">Germany</option>
             <option value="Canada">Canada</option>
@@ -101,7 +101,7 @@ function App() {
         </div>
 
         <div>
-          <h3 className="text-base font-semibold">Street Adress</h3>
+          <h3 className="text-base font-semibold mt-2">Street Adress</h3>
           <input
             onChange={changeHandler}
             className="border-2 rounded h-[35px] w-full px-2"
