@@ -79,9 +79,7 @@ function App() {
         {/* dropdown */}
         {/* dropdown */}
         {/* dropdown */}
-        {/* dropdown */}
-        {/* dropdown */}
-        {/* dropdown */}
+        {/* ******************************************************************************************************************** */}
 
         <div>
           <h3 className="text-base font-semibold">Country</h3>
@@ -136,9 +134,7 @@ function App() {
           />
         </div>
 
-        {/* dropdown */}
-        {/* dropdown */}
-        {/* dropdown */}
+        {/* ******************************************************************************************************************** */}
         {/* dropdown */}
         {/* dropdown */}
         {/* dropdown */}
@@ -146,31 +142,26 @@ function App() {
         {/* checkboxes */}
         {/* checkboxes */}
         {/* checkboxes */}
-        {/* checkboxes */}
-        {/* checkboxes */}
-        {/* checkboxes */}
-        {/* checkboxes */}
+        {/* ******************************************************************************************************************** */}
 
-        <div className="">
-          <h3 className="text-base font-semibold mb-4">By Email</h3>
-          <div className="">
-            <div className="flex gap-4">
-              <input
-                className="h-[14px] w-[14px] mt-1.5"
-                onChange={changeHandler}
-                type="checkbox"
-                name="comments"
-                id="comments"
-                checked={formData.comments}
-              />
-              <label className="text-base font-semibold" htmlFor="comments">
-                Comments
-              </label>
-            </div>
-            <p className="px-7">
-              Get notified when someone posts a comment on a posting.
-            </p>
+        <fieldset>
+          <legend className="text-base font-semibold mb-2">By Email</legend>
+          <div className="flex gap-4">
+            <input
+              className="h-[14px] w-[14px] mt-1.5"
+              onChange={changeHandler}
+              type="checkbox"
+              name="comments"
+              id="comments"
+              checked={formData.comments}
+            />
+            <label className="text-base font-semibold" htmlFor="comments">
+              Comments
+            </label>
           </div>
+          <p className="px-7">
+            Get notified when someone posts a comment on a posting.
+          </p>
 
           <div>
             <div className="flex gap-4">
@@ -190,103 +181,95 @@ function App() {
               Get notified when a candidate applies for a job.
             </p>
           </div>
+        </fieldset>
 
+        <div className="mb-4">
+          <div className="flex gap-4 ">
+            <input
+              className="h-[14px] w-[14px] mt-1.5"
+              onChange={changeHandler}
+              type="checkbox"
+              name="offers"
+              id="offers"
+              checked={formData.offers}
+            />
+            <label className="text-base font-semibold" htmlFor="offers">
+              Offers
+            </label>
+          </div>
+          <p className="px-7">
+            Get notified when a candidate accepts or rejects an offer.
+          </p>
+        </div>
+
+        {/* ******************************************************************************************************************** */}
+        {/* checkboxes */}
+        {/* checkboxes */}
+        {/* checkboxes */}
+
+        {/* Radio Buttons */}
+        {/* Radio Buttons */}
+        {/* Radio Buttons */}
+        {/* ******************************************************************************************************************** */}
+        <div>
           <div className="mb-4">
-            <div className="flex gap-4 ">
+            <h3 className="text-base font-semibold">Push Notification</h3>
+            <p>These are delivered via SMS to your mobile phone</p>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <div className="flex gap-3">
               <input
                 className="h-[14px] w-[14px] mt-1.5"
                 onChange={changeHandler}
-                type="checkbox"
-                name="offers"
-                id="offers"
-                checked={formData.offers}
+                type="radio"
+                name="pushNotification"
+                value="everything"
+                id="everything"
+                checked={formData.pushNotification === "everything"}
               />
-              <label className="text-base font-semibold" htmlFor="offers">
-                Offers
+              <label className="text-base font-semibold" htmlFor="everything">
+                Everything
               </label>
             </div>
-            <p className="px-7">
-              Get notified when a candidate accepts or rejects an offer.
-            </p>
-          </div>
-          {/* checkboxes */}
-          {/* checkboxes */}
-          {/* checkboxes */}
-          {/* checkboxes */}
-          {/* checkboxes */}
-          {/* checkboxes */}
-          {/* checkboxes */}
-
-          {/* Radio Buttons */}
-          {/* Radio Buttons */}
-          {/* Radio Buttons */}
-          {/* Radio Buttons */}
-          {/* Radio Buttons */}
-          {/* Radio Buttons */}
-          {/* Radio Buttons */}
-          <div>
-            <div className="mb-4">
-              <h3 className="text-base font-semibold">Push Notification</h3>
-              <p>These are delivered via SMS to your mobile phone</p>
+            <div className="flex gap-3">
+              <input
+                className="h-[14px] w-[14px] mt-1.5"
+                onChange={changeHandler}
+                type="radio"
+                name="pushNotification"
+                value="same as email"
+                id="same as email"
+                checked={formData.pushNotification === "same as email"}
+              />
+              <label
+                className="text-base font-semibold"
+                htmlFor="same as email"
+              >
+                Same as email
+              </label>
             </div>
-
-            <div className="flex flex-col gap-2">
-              <div className="flex gap-3">
-                <input
-                  className="h-[14px] w-[14px] mt-1.5"
-                  onChange={changeHandler}
-                  type="radio"
-                  name="pushNotification"
-                  value="everything"
-                  id="everything"
-                  checked={formData.pushNotification === "everything"}
-                />
-                <label className="text-base font-semibold" htmlFor="everything">
-                  Everything
-                </label>
-              </div>
-              <div className="flex gap-3">
-                <input
-                  className="h-[14px] w-[14px] mt-1.5"
-                  onChange={changeHandler}
-                  type="radio"
-                  name="pushNotification"
-                  value="same as email"
-                  id="same as email"
-                  checked={formData.pushNotification === "same as email"}
-                />
-                <label
-                  className="text-base font-semibold"
-                  htmlFor="same as email"
-                >
-                  Same as email
-                </label>
-              </div>
-              <div className="flex gap-3">
-                <input
-                  className="h-[14px] w-[14px] mt-1.5"
-                  onChange={changeHandler}
-                  type="radio"
-                  name="pushNotification"
-                  value="no push notification"
-                  id="no push notification"
-                  checked={formData.pushNotification === "no push notification"}
-                />
-                <label
-                  className="text-base font-semibold"
-                  htmlFor="no push notification"
-                >
-                  No push notification
-                </label>
-              </div>
+            <div className="flex gap-3">
+              <input
+                className="h-[14px] w-[14px] mt-1.5"
+                onChange={changeHandler}
+                type="radio"
+                name="pushNotification"
+                value="no push notification"
+                id="no push notification"
+                checked={formData.pushNotification === "no push notification"}
+              />
+              <label
+                className="text-base font-semibold"
+                htmlFor="no push notification"
+              >
+                No push notification
+              </label>
             </div>
           </div>
         </div>
 
-        {/* Radio Buttons */}
-        {/* Radio Buttons */}
-        {/* Radio Buttons */}
-        {/* Radio Buttons */}
+        {/* ******************************************************************************************************************** */}
         {/* Radio Buttons */}
         {/* Radio Buttons */}
         {/* Radio Buttons */}
