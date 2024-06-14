@@ -30,9 +30,9 @@ function App() {
   }
 
   return (
-    <div className=" w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center">
       <form
-        className="w-[65vw] border-2 hover:shadow-2xl ease-linear transition-all duration-300 px-5 my-4"
+        className="w-[65vw] border-2 hover:shadow-2xl ease-linear transition-all duration-300 px-5 my-4 rounded-md"
         onSubmit={submitHandler}
       >
         <div className="flex justify-center mt-4">
@@ -149,6 +149,7 @@ function App() {
           <div className="">
             <div className="flex gap-4">
               <input
+                className="h-[14px] w-[14px] mt-1.5"
                 onChange={changeHandler}
                 type="checkbox"
                 name="comments"
@@ -167,6 +168,7 @@ function App() {
           <div>
             <div className="flex gap-4">
               <input
+                className="h-[14px] w-[14px] mt-1.5"
                 onChange={changeHandler}
                 type="checkbox"
                 name="candidates"
@@ -183,8 +185,9 @@ function App() {
           </div>
 
           <div className="mb-4">
-            <div className="flex gap-4">
+            <div className="flex gap-4 ">
               <input
+                className="h-[14px] w-[14px] mt-1.5"
                 onChange={changeHandler}
                 type="checkbox"
                 name="offers"
@@ -217,6 +220,7 @@ function App() {
             <div className="flex flex-col gap-2">
               <div className="flex gap-3">
                 <input
+                  className="h-[14px] w-[14px] mt-1.5"
                   onChange={changeHandler}
                   type="radio"
                   name="noti"
@@ -230,6 +234,7 @@ function App() {
               </div>
               <div className="flex gap-3">
                 <input
+                  className="h-[14px] w-[14px] mt-1.5"
                   onChange={changeHandler}
                   type="radio"
                   name="noti"
@@ -246,6 +251,7 @@ function App() {
               </div>
               <div className="flex gap-3">
                 <input
+                  className="h-[14px] w-[14px] mt-1.5"
                   onChange={changeHandler}
                   type="radio"
                   name="noti"
