@@ -211,9 +211,12 @@ function App() {
         {/* Radio Buttons */}
         {/* Radio Buttons */}
         {/* ******************************************************************************************************************** */}
-        <div>
+
+        <fieldset>
           <div className="mb-4">
-            <h3 className="text-base font-semibold">Push Notification</h3>
+            <legend className="text-base font-semibold">
+              Push Notification
+            </legend>
             <p>These are delivered via SMS to your mobile phone</p>
           </div>
 
@@ -267,7 +270,7 @@ function App() {
               </label>
             </div>
           </div>
-        </div>
+        </fieldset>
 
         {/* ******************************************************************************************************************** */}
         {/* Radio Buttons */}
