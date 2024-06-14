@@ -5,13 +5,14 @@ function App() {
     firstName: "",
     lastName: "",
     email: "",
+    country: "India",
     address: "",
     state: "",
     ZIP: "",
     comments: false,
     candidates: false,
     offers: false,
-    noti: "",
+    pushNotification: "",
   });
 
   function changeHandler(event) {
@@ -85,8 +86,7 @@ function App() {
         <div>
           <h3 className="text-base font-semibold">Country</h3>
           <select
-            defaultValue=""
-            className="text-base font-semibold mt-2 w-full border-2 rounded h-[35px] w-full px-2"
+            className="text-base font-semibold mt-2 border-2 rounded h-[35px] w-full px-2"
             name="country"
             id="country"
             value={formData.country}
@@ -135,6 +135,13 @@ function App() {
             value={formData.ZIP}
           />
         </div>
+
+        {/* dropdown */}
+        {/* dropdown */}
+        {/* dropdown */}
+        {/* dropdown */}
+        {/* dropdown */}
+        {/* dropdown */}
 
         {/* checkboxes */}
         {/* checkboxes */}
@@ -202,6 +209,13 @@ function App() {
               Get notified when a candidate accepts or rejects an offer.
             </p>
           </div>
+          {/* checkboxes */}
+          {/* checkboxes */}
+          {/* checkboxes */}
+          {/* checkboxes */}
+          {/* checkboxes */}
+          {/* checkboxes */}
+          {/* checkboxes */}
 
           {/* Radio Buttons */}
           {/* Radio Buttons */}
@@ -210,7 +224,6 @@ function App() {
           {/* Radio Buttons */}
           {/* Radio Buttons */}
           {/* Radio Buttons */}
-
           <div>
             <div className="mb-4">
               <h3 className="text-base font-semibold">Push Notification</h3>
@@ -223,10 +236,10 @@ function App() {
                   className="h-[14px] w-[14px] mt-1.5"
                   onChange={changeHandler}
                   type="radio"
-                  name="noti"
+                  name="pushNotification"
                   value="everything"
                   id="everything"
-                  checked={formData.noti === "everything"}
+                  checked={formData.pushNotification === "everything"}
                 />
                 <label className="text-base font-semibold" htmlFor="everything">
                   Everything
@@ -237,10 +250,10 @@ function App() {
                   className="h-[14px] w-[14px] mt-1.5"
                   onChange={changeHandler}
                   type="radio"
-                  name="noti"
+                  name="pushNotification"
                   value="same as email"
                   id="same as email"
-                  checked={formData.noti === "same as email"}
+                  checked={formData.pushNotification === "same as email"}
                 />
                 <label
                   className="text-base font-semibold"
@@ -254,10 +267,10 @@ function App() {
                   className="h-[14px] w-[14px] mt-1.5"
                   onChange={changeHandler}
                   type="radio"
-                  name="noti"
+                  name="pushNotification"
                   value="no push notification"
                   id="no push notification"
-                  checked={formData.noti === "no push notification"}
+                  checked={formData.pushNotification === "no push notification"}
                 />
                 <label
                   className="text-base font-semibold"
@@ -269,6 +282,14 @@ function App() {
             </div>
           </div>
         </div>
+
+        {/* Radio Buttons */}
+        {/* Radio Buttons */}
+        {/* Radio Buttons */}
+        {/* Radio Buttons */}
+        {/* Radio Buttons */}
+        {/* Radio Buttons */}
+        {/* Radio Buttons */}
 
         <button className="p-1 px-6 bg-blue-600 text-white rounded-md font-bold mt-4 mb-4">
           Save
