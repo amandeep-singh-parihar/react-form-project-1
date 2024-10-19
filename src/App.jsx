@@ -98,6 +98,11 @@ function App() {
           </select>
         </div>
 
+        {/* ******************************************************************************************************************** */}
+        {/* dropdown */}
+        {/* dropdown */}
+        {/* dropdown */}
+
         <div>
           <h3 className="text-base font-semibold mt-2">Street Adress</h3>
           <input
@@ -133,11 +138,6 @@ function App() {
             value={formData.ZIP}
           />
         </div>
-
-        {/* ******************************************************************************************************************** */}
-        {/* dropdown */}
-        {/* dropdown */}
-        {/* dropdown */}
 
         {/* checkboxes */}
         {/* checkboxes */}
